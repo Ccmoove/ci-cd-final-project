@@ -21,8 +21,7 @@ spec:
         set -e
         python -m pip install --upgrade pip wheel
         pip install -r requirements.txt
-        nosetests $(params.args)
-  steps:
+        nosetests $(params.argsteps:
     - name: remove
       image: alpine:3
       env:
